@@ -1,0 +1,28 @@
+version: '3.6'
+services:
+  tyk-portal:
+    depends_on:
+      - tyk-portal-postgres
+    image: tykio/portal:v1.5
+    networks:
+      - tyk-portal
+    ports:
+      - 3001:3001
+    env_file:
+      - ./confs/tyk_portal.env
+
+  tyk-portal-postgres:
+    image: postgres:10-alpine
+    volumes:
+      - tyk-portal-postgres-data:/var/lib/postgresql/data/pgdata
+      - ${PWD}/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - tyk-portal
+    env_file:
+      - ./confs/postgres.env
+
+volumes:
+  tyk-portal-postgres-data:
+
+networks:
+  tyk-portal:
