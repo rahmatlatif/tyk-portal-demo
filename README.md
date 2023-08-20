@@ -4,6 +4,8 @@
 **Prerequisites**
 
 - [Docker](https://docs.docker.com/get-docker/)
+- Running Tyk Pro deployment (To synchronize API plans and products)
+  You can use [Tyk Pro Docker Demo](https://github.com/TykTechnologies/tyk-pro-docker-demo) for PoC purposes
 
 Run these commands:
 
