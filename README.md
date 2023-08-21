@@ -16,6 +16,12 @@ Run these commands:
 
 Then navigate to [http://localhost:3001](http://localhost:3001) and input the admin registration details.
 
+## Synchronize Tyk Pro to Tyk Portal
+
+If using [Tyk Pro Docker Demo](https://github.com/TykTechnologies/tyk-pro-docker-demo) set Dashboard URL to http://tyk-dashboard:3000
+
+If not using Tyk Pro Docker Demo, set Dashboard URL
+
 ## Advanced
 
 ### Cleanup Docker Containers
