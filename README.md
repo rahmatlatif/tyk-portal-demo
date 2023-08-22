@@ -14,7 +14,17 @@ Run these commands:
 
 2. `docker-compose up`
 
-Then navigate to [http://localhost:3001](http://localhost:3001) and input the admin registration details.
+3. `docker network connect <tyk pro network> <tyk portal container name>`
+
+By default the `tyk pro network` would be `tyk-pro-docker-demo_tyk` and `tyk portal container name` would be `tyk-portal-demo-tyk-portal-1`
+
+You can list docker networks using:
+`docker network ls`
+
+You can list docker containers using:
+`docker container ps`
+
+4. Navigate to [http://localhost:3001](http://localhost:3001) and input the admin registration details.
 
 ## Synchronize Tyk Pro to Tyk Portal
 
